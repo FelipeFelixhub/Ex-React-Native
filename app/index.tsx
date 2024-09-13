@@ -36,6 +36,7 @@ function carregarProdutos(){
     </View>
   );
   function telaCadastro(){
+    router.push('/cadastro');
     
   }
   
