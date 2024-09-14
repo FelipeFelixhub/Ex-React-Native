@@ -3,12 +3,18 @@ import { Text, View, StyleSheet, Button } from "react-native";
 import ListaProdutos from "./Componentes/Adptadores/ListaProdutos";
 import Style from "./Styles/Default";
 import axios from "axios";
-import { useRouter } from "expo-router";
+import { useRouter,useFocusEffect } from "expo-router";
+
 
 
 
 export default function Index() {
   const router = useRouter();  
+  useFocusEffect(()=>{
+    carregarProdutos();
+
+  })
+
 
  let[produtos,setProdutos]=useState([]);
 
@@ -36,7 +42,7 @@ function carregarProdutos(){
     </View>
   );
   function telaCadastro(){
-    router.push('/cadastro');
+    router.push('/Telas/cadastro');
     
   }
   
