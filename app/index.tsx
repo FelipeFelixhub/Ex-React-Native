@@ -28,7 +28,7 @@ function carregarProdutos(){
     <View
       style={Style.container}
       >
-      <ListaProdutos produtos={produtos}></ListaProdutos>
+      <ListaProdutos produtos={produtos}aoAtualizar={carregarProdutos}></ListaProdutos>
 
       <Button title='Cadastrar' onPress={()=>{telaCadastro()}}></Button>
 
